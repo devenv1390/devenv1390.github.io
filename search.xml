@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>搭建环境</category>
+      </categories>
       <tags>
         <tag>配置方式</tag>
       </tags>
@@ -298,8 +301,11 @@ Crazy THU vivo $<span class="token number">50</span><span aria-hidden="true" cla
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> int_array <span class="token operator">:</span> IntArray <span class="token operator">=</span> <span class="token function">intArrayOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
 ]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
       <tags>
-        <tag>kotlin</tag>
+        <tag>Kotlin</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://devenv1390.github.io/atom.xml" rel="self"/>
   
   <link href="https://devenv1390.github.io/"/>
-  <updated>2023-03-09T15:09:53.745Z</updated>
+  <updated>2023-03-09T15:48:14.295Z</updated>
   <id>https://devenv1390.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://devenv1390.github.io/post/hello-world.html"/>
     <id>https://devenv1390.github.io/post/hello-world.html</id>
     <published>2023-03-09T04:34:08.493Z</published>
-    <updated>2023-03-09T15:09:53.745Z</updated>
+    <updated>2023-03-09T15:48:14.295Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    <category term="搭建环境" scheme="https://devenv1390.github.io/categories/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/"/>
+    
     
     <category term="配置方式" scheme="https://devenv1390.github.io/tags/%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/"/>
     
@@ -44,7 +46,7 @@
     <link href="https://devenv1390.github.io/post/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin.html"/>
     <id>https://devenv1390.github.io/post/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin.html</id>
     <published>2022-10-24T04:37:11.000Z</published>
-    <updated>2023-03-09T15:43:54.830Z</updated>
+    <updated>2023-03-09T15:48:07.943Z</updated>
     
     
       
@@ -57,8 +59,10 @@
     
     
     
+    <category term="Code" scheme="https://devenv1390.github.io/categories/Code/"/>
     
-    <category term="kotlin" scheme="https://devenv1390.github.io/tags/kotlin/"/>
+    
+    <category term="Kotlin" scheme="https://devenv1390.github.io/tags/Kotlin/"/>
     
   </entry>
   
