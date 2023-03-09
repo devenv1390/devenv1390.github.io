@@ -6,7 +6,7 @@
   <link href="https://devenv1390.github.io/atom.xml" rel="self"/>
   
   <link href="https://devenv1390.github.io/"/>
-  <updated>2023-03-09T06:05:55.849Z</updated>
+  <updated>2023-03-09T13:57:17.086Z</updated>
   <id>https://devenv1390.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>快速入门Kotlin</title>
-    <link href="https://devenv1390.github.io/2023/03/09/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin/"/>
-    <id>https://devenv1390.github.io/2023/03/09/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin/</id>
+    <link href="https://devenv1390.github.io/post/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin.html"/>
+    <id>https://devenv1390.github.io/post/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin.html</id>
     <published>2023-03-09T04:37:11.000Z</published>
-    <updated>2023-03-09T06:05:55.849Z</updated>
+    <updated>2023-03-09T13:57:17.086Z</updated>
     
     
       
@@ -41,8 +41,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://devenv1390.github.io/2023/03/09/hello-world/"/>
-    <id>https://devenv1390.github.io/2023/03/09/hello-world/</id>
+    <link href="https://devenv1390.github.io/post/hello-world.html"/>
+    <id>https://devenv1390.github.io/post/hello-world.html</id>
     <published>2023-03-09T04:34:08.493Z</published>
     <updated>2023-03-09T04:34:08.494Z</updated>
     
