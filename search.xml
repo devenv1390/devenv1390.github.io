@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>//post/hello-world.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>配置方式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kotlin异常处理</title>
+    <url>//post/Kotlin%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.html</url>
+    <content><![CDATA[<h1 id="Kotlin异常处理"><a href="#Kotlin异常处理" class="headerlink" title="Kotlin异常处理"></a>Kotlin异常处理</h1><h2 id="异常类"><a href="#异常类" class="headerlink" title="异常类"></a>异常类</h2><p>Kotlin 中所有异常类继承自 <code>Throwable</code> 类。 每个异常都有消息、堆栈回溯信息以及可选的原因。</p>
+<p>使用 <code>throw</code> 表达式来抛出异常：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token comment">//sampleStart</span>
+    <span class="token keyword">throw</span> <span class="token function">Exception</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hi There!"</span></span><span class="token punctuation">)</span>
+<span class="token comment">//sampleEnd</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用 <code>try</code>……<code>catch</code> 表达式来捕获异常：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 一些代码</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> SomeException<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 处理程序</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 可选的 finally 块</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以有零到多个 <code>catch</code> 块，<code>finally</code> 块可以省略。 但是 <code>catch</code> 与 <code>finally</code> 块至少需有一个。</p>
+<h3 id="Try-是一个表达式"><a href="#Try-是一个表达式" class="headerlink" title="Try 是一个表达式"></a>Try 是一个表达式</h3><p><code>try</code> 是一个表达式，意味着它可以有一个返回值：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> a<span class="token operator">:</span> Int<span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token punctuation">&#123;</span> input<span class="token punctuation">.</span><span class="token function">toInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> NumberFormatException<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">null</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>try</code>-表达式的返回值是 <code>try</code> 块中的最后一个表达式或者是（所有）<code>catch</code> 块中的最后一个表达式。 <code>finally</code> 块中的内容不会影响表达式的结果。</p>
+<h2 id="受检异常"><a href="#受检异常" class="headerlink" title="受检异常"></a>受检异常</h2><p>Kotlin 没有受检异常。这其中有很多原因，但我们会提供一个简单的示例 that illustrates why it is the case。</p>
+<p>以下是 JDK 中 <code>StringBuilder</code> 类实现的一个示例接口：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">Appendable <span class="token function">append</span><span class="token punctuation">(</span>CharSequence csq<span class="token punctuation">)</span> throws IOException<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个签名是说，每次我追加一个字符串到一些东西（一个 <code>StringBuilder</code>、某种日志、一个控制台等）上时，我就必须捕获 <code>IOException</code>。 为什么？因为相应实现可能正在执行 IO 操作（<code>Writer</code> 也实现了 <code>Appendable</code>）。 其结果是这种代码随处可见：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+    log<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>IOException e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 必须要安全</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这并不好，看看<a href="https://www.oracle.com/technetwork/java/effectivejava-136174.html">《Effective Java》第三版</a> 第 77 条：<em>不要忽略异常</em> 就知道了。</p>
+<p>Bruce Eckel says this about checked exceptions:</p>
+<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
+<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
+<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
+</svg>
+</span><p>通过一些小程序测试得出的结论是异常规范会同时提高开发者的生产力与代码质量，但是大型软件项目的经验表明一个不同的结论——生产力降低、代码质量很少或没有提高。</p></blockquote>
+<p>And here are some additional thoughts on the matter:</p>
+<ul>
+<li><a href="https://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html">《Java 的受检异常是一个错误》（Java&#39;s checked exceptions were a mistake）</a>（Rod Waldhoff）</li>
+<li><a href="https://www.artima.com/intv/handcuffs.html">《受检异常的烦恼》（The Trouble with Checked Exceptions）</a>（Anders Hejlsberg）</li>
+</ul>
+<p>If you want to alert callers about possible exceptions when calling Kotlin code from Java, Swift, or Objective-C, you can use the <code>@Throws</code> annotation. Read more about using this annotation <a href="https://book.kotlincn.net/text/java-to-kotlin-interop.html#%E5%8F%97%E6%A3%80%E5%BC%82%E5%B8%B8">for Java</a> and <a href="https://book.kotlincn.net/text/native-objc-interop.html#errors-and-exceptions">for Swift and Objective-C</a>.</p>
+<h2 id="Nothing-类型"><a href="#Nothing-类型" class="headerlink" title="Nothing 类型"></a>Nothing 类型</h2><p>在 Kotlin 中 <code>throw</code> 是表达式，所以你可以使用它（比如）作为 Elvis 表达式的一部分：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> s <span class="token operator">=</span> person<span class="token punctuation">.</span>name <span class="token operator">?:</span> <span class="token keyword">throw</span> <span class="token function">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Name required"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>throw</code> 表达式的类型是 <code>Nothing</code> 类型。 这个类型没有值，而是用于标记永远不能达到的代码位置。 在你自己的代码中，你可以使用 <code>Nothing</code> 来标记一个永远不会返回的函数：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">fail</span><span class="token punctuation">(</span>message<span class="token operator">:</span> String<span class="token punctuation">)</span><span class="token operator">:</span> Nothing <span class="token punctuation">&#123;</span>
+    <span class="token keyword">throw</span> <span class="token function">IllegalArgumentException</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>当你调用该函数时，编译器会知道在该调用后就不再继续执行了：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> s <span class="token operator">=</span> person<span class="token punctuation">.</span>name <span class="token operator">?:</span> <span class="token function">fail</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Name required"</span></span><span class="token punctuation">)</span>
+<span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>     <span class="token comment">// 在此已知“s”已初始化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>当处理类型推断时还可能会遇到这个类型。这个类型的可空变体 <code>Nothing?</code> 有一个可能的值是 <code>null</code>。如果用 <code>null</code> 来初始化一个要推断类型的值，而又没有其他信息可用于确定更具体的类型时，编译器会推断出 <code>Nothing?</code> 类型：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> x <span class="token operator">=</span> <span class="token keyword">null</span>           <span class="token comment">// “x”具有类型 `Nothing?`</span>
+<span class="token keyword">val</span> l <span class="token operator">=</span> <span class="token function">listOf</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>   <span class="token comment">// “l”具有类型 `List&lt;Nothing?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>Kotlin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Kotlin协程</title>
     <url>//post/Kotlin%E5%8D%8F%E7%A8%8B.html</url>
     <content><![CDATA[<h1 id="Kotlin-协程"><a href="#Kotlin-协程" class="headerlink" title="Kotlin 协程"></a>Kotlin 协程</h1><p>Kotlin程序至少会有一个线程，而这个线程也就是我们常说的主线程。程序启动后由Java虚拟机创建主线程，程序结束后由java虚拟机销毁主线程。而我们开发人员创建的各种线程都是子线程。主线程负责管理子线程的启动，挂起，停止等操作。而主线程，在我们应用开发中还有一个名称：<code>UI线程</code>。</p>
@@ -135,107 +236,6 @@ Done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
       </categories>
       <tags>
         <tag>Kotlin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kotlin异常处理</title>
-    <url>//post/Kotlin%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.html</url>
-    <content><![CDATA[<h1 id="Kotlin异常处理"><a href="#Kotlin异常处理" class="headerlink" title="Kotlin异常处理"></a>Kotlin异常处理</h1><h2 id="异常类"><a href="#异常类" class="headerlink" title="异常类"></a>异常类</h2><p>Kotlin 中所有异常类继承自 <code>Throwable</code> 类。 每个异常都有消息、堆栈回溯信息以及可选的原因。</p>
-<p>使用 <code>throw</code> 表达式来抛出异常：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-<span class="token comment">//sampleStart</span>
-    <span class="token keyword">throw</span> <span class="token function">Exception</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Hi There!"</span></span><span class="token punctuation">)</span>
-<span class="token comment">//sampleEnd</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>使用 <code>try</code>……<code>catch</code> 表达式来捕获异常：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 一些代码</span>
-<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> SomeException<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 处理程序</span>
-<span class="token punctuation">&#125;</span> <span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 可选的 finally 块</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以有零到多个 <code>catch</code> 块，<code>finally</code> 块可以省略。 但是 <code>catch</code> 与 <code>finally</code> 块至少需有一个。</p>
-<h3 id="Try-是一个表达式"><a href="#Try-是一个表达式" class="headerlink" title="Try 是一个表达式"></a>Try 是一个表达式</h3><p><code>try</code> 是一个表达式，意味着它可以有一个返回值：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> a<span class="token operator">:</span> Int<span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token punctuation">&#123;</span> input<span class="token punctuation">.</span><span class="token function">toInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> NumberFormatException<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">null</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>try</code>-表达式的返回值是 <code>try</code> 块中的最后一个表达式或者是（所有）<code>catch</code> 块中的最后一个表达式。 <code>finally</code> 块中的内容不会影响表达式的结果。</p>
-<h2 id="受检异常"><a href="#受检异常" class="headerlink" title="受检异常"></a>受检异常</h2><p>Kotlin 没有受检异常。这其中有很多原因，但我们会提供一个简单的示例 that illustrates why it is the case。</p>
-<p>以下是 JDK 中 <code>StringBuilder</code> 类实现的一个示例接口：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">Appendable <span class="token function">append</span><span class="token punctuation">(</span>CharSequence csq<span class="token punctuation">)</span> throws IOException<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>这个签名是说，每次我追加一个字符串到一些东西（一个 <code>StringBuilder</code>、某种日志、一个控制台等）上时，我就必须捕获 <code>IOException</code>。 为什么？因为相应实现可能正在执行 IO 操作（<code>Writer</code> 也实现了 <code>Appendable</code>）。 其结果是这种代码随处可见：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-    log<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>IOException e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 必须要安全</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>这并不好，看看<a href="https://www.oracle.com/technetwork/java/effectivejava-136174.html">《Effective Java》第三版</a> 第 77 条：<em>不要忽略异常</em> 就知道了。</p>
-<p>Bruce Eckel says this about checked exceptions:</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>通过一些小程序测试得出的结论是异常规范会同时提高开发者的生产力与代码质量，但是大型软件项目的经验表明一个不同的结论——生产力降低、代码质量很少或没有提高。</p></blockquote>
-<p>And here are some additional thoughts on the matter:</p>
-<ul>
-<li><a href="https://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html">《Java 的受检异常是一个错误》（Java&#39;s checked exceptions were a mistake）</a>（Rod Waldhoff）</li>
-<li><a href="https://www.artima.com/intv/handcuffs.html">《受检异常的烦恼》（The Trouble with Checked Exceptions）</a>（Anders Hejlsberg）</li>
-</ul>
-<p>If you want to alert callers about possible exceptions when calling Kotlin code from Java, Swift, or Objective-C, you can use the <code>@Throws</code> annotation. Read more about using this annotation <a href="https://book.kotlincn.net/text/java-to-kotlin-interop.html#%E5%8F%97%E6%A3%80%E5%BC%82%E5%B8%B8">for Java</a> and <a href="https://book.kotlincn.net/text/native-objc-interop.html#errors-and-exceptions">for Swift and Objective-C</a>.</p>
-<h2 id="Nothing-类型"><a href="#Nothing-类型" class="headerlink" title="Nothing 类型"></a>Nothing 类型</h2><p>在 Kotlin 中 <code>throw</code> 是表达式，所以你可以使用它（比如）作为 Elvis 表达式的一部分：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> s <span class="token operator">=</span> person<span class="token punctuation">.</span>name <span class="token operator">?:</span> <span class="token keyword">throw</span> <span class="token function">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Name required"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>throw</code> 表达式的类型是 <code>Nothing</code> 类型。 这个类型没有值，而是用于标记永远不能达到的代码位置。 在你自己的代码中，你可以使用 <code>Nothing</code> 来标记一个永远不会返回的函数：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">fail</span><span class="token punctuation">(</span>message<span class="token operator">:</span> String<span class="token punctuation">)</span><span class="token operator">:</span> Nothing <span class="token punctuation">&#123;</span>
-    <span class="token keyword">throw</span> <span class="token function">IllegalArgumentException</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>当你调用该函数时，编译器会知道在该调用后就不再继续执行了：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> s <span class="token operator">=</span> person<span class="token punctuation">.</span>name <span class="token operator">?:</span> <span class="token function">fail</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Name required"</span></span><span class="token punctuation">)</span>
-<span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>     <span class="token comment">// 在此已知“s”已初始化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>当处理类型推断时还可能会遇到这个类型。这个类型的可空变体 <code>Nothing?</code> 有一个可能的值是 <code>null</code>。如果用 <code>null</code> 来初始化一个要推断类型的值，而又没有其他信息可用于确定更具体的类型时，编译器会推断出 <code>Nothing?</code> 类型：</p>
-<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> x <span class="token operator">=</span> <span class="token keyword">null</span>           <span class="token comment">// “x”具有类型 `Nothing?`</span>
-<span class="token keyword">val</span> l <span class="token operator">=</span> <span class="token function">listOf</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>   <span class="token comment">// “l”具有类型 `List&lt;Nothing?></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>Code</category>
-      </categories>
-      <tags>
-        <tag>Kotlin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>//post/hello-world.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>搭建环境</category>
-      </categories>
-      <tags>
-        <tag>配置方式</tag>
       </tags>
   </entry>
   <entry>
