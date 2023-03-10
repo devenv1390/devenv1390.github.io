@@ -241,10 +241,10 @@ Done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
   <entry>
     <title>快速入门Kotlin</title>
     <url>//post/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20Kotlin.html</url>
-    <content><![CDATA[<h1 id="快速入门-Kotlin"><a href="#快速入门-Kotlin" class="headerlink" title="快速入门 Kotlin"></a>快速入门 Kotlin</h1><p>在开始这一切的一切之前，我想你应该已经了解了<a href="%E5%9C%A8Kotlin%E4%B8%AD%EF%BC%8C%E7%A8%8B%E5%BA%8F%E9%83%BD%E4%BC%9A%E5%8C%85%E5%90%AB%E4%B8%80%E4%B8%AAmain()%E5%87%BD%E6%95%B0%EF%BC%8C%E4%BD%9C%E4%B8%BA%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3%EF%BC%8C%E8%AF%A5%E5%87%BD%E6%95%B0%E4%B8%AD%E4%BC%9A%E5%8C%85%E5%90%AB%E4%B8%80%E4%BA%9B%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%E4%BB%A5%E5%8F%8A%E8%BF%94%E5%9B%9E%E5%80%BC%E7%AD%89%E4%BF%A1%E6%81%AF%E3%80%82" title="Kotlin的基本语法">Kotlin 的基本语法</a>，如果你还不是很了解，可以查看<a href="https://book.kotlincn.net/text/basic-syntax.html" title="Kotlin 中文文档">Kotlin 的中文文档</a>来浅浅了解一下。</p>
+    <content><![CDATA[<h1 id="快速入门-Kotlin"><a href="#快速入门-Kotlin" class="headerlink" title="快速入门 Kotlin"></a>快速入门 Kotlin</h1><p>在开始这一切的一切之前，我想你应该已经了解了<a href="%E5%9C%A8Kotlin%E4%B8%AD%EF%BC%8C%E7%A8%8B%E5%BA%8F%E9%83%BD%E4%BC%9A%E5%8C%85%E5%90%AB%E4%B8%80%E4%B8%AAmain()%E5%87%BD%E6%95%B0%EF%BC%8C%E4%BD%9C%E4%B8%BA%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3%EF%BC%8C%E8%AF%A5%E5%87%BD%E6%95%B0%E4%B8%AD%E4%BC%9A%E5%8C%85%E5%90%AB%E4%B8%80%E4%BA%9B%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5%E4%BB%A5%E5%8F%8A%E8%BF%94%E5%9B%9E%E5%80%BC%E7%AD%89%E4%BF%A1%E6%81%AF%E3%80%82" title="Kotlin的基本语法">Kotlin 的基本语法</a>，如果你还不是很了解，可以查看<a href="%5Bhttps://book.kotlincn.net/text/basic-syntax.html%5D(https://book.kotlincn.net/text/basic-syntax.html)" title="Kotlin 中文文档">Kotlin 的中文文档</a>来浅浅了解一下。</p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a><strong>变量</strong></h2><p>Kotlin 中的变量分为两种类型，分别为<strong>可变变量</strong>和<strong>不可变变量</strong>。</p>
-<h3 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a><strong>可变变量</strong></h3><p>使用关键字<code>var</code>来修饰，可以进行多次修改（词源 variable，指可变的）。</p>
-<h3 id="不可变变量"><a href="#不可变变量" class="headerlink" title="不可变变量"></a><strong>不可变变量</strong></h3><p>使用关键字<code>val</code>来修饰，在初始化后就不可再对其进行修改，相当于一个常量（词源 value，指一个值）。</p>
+<h3 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a><strong>可变变量</strong></h3><p>使用关键字 <code>var</code>来修饰，可以进行多次修改（词源 variable，指可变的）。</p>
+<h3 id="不可变变量"><a href="#不可变变量" class="headerlink" title="不可变变量"></a><strong>不可变变量</strong></h3><p>使用关键字 <code>val</code>来修饰，在初始化后就不可再对其进行修改，相当于一个常量（词源 value，指一个值）。</p>
 <h3 id="那么我们该如何在-Kotlin-中声明变量和给变量赋值呢？"><a href="#那么我们该如何在-Kotlin-中声明变量和给变量赋值呢？" class="headerlink" title="那么我们该如何在 Kotlin 中声明变量和给变量赋值呢？"></a>那么我们该如何在 Kotlin 中声明变量和给变量赋值呢？</h3><p>方法其实和其他的语言差不多，就是关键字加变量名然后赋值。</p>
 <p>这里先展示几种定义变量的方法，也需要遵守<a href="%E5%9C%A8Kotlin%E4%B8%AD%EF%BC%8C%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E8%AF%BE%E5%88%86%E4%B8%BA%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%8A%9F%E8%83%BD%E6%89%A7%E8%A1%8C%E8%AF%AD%E5%8F%A5%EF%BC%8C%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89%E8%AF%AD%E5%8F%A5%E7%94%A8%E4%BA%8E%E5%A3%B0%E6%98%8E%E4%B8%80%E4%B8%AA%E7%B1%BB%E6%88%96%E8%80%85%E5%87%BD%E6%95%B0%EF%BC%8C%E5%8A%9F%E8%83%BD%E6%89%A7%E8%A1%8C%E8%AF%AD%E5%8F%A5%E7%94%A8%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%85%B7%E4%BD%93%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%8C%E6%AF%8F%E6%9D%A1%E5%8D%95%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E6%89%A7%E8%A1%8C%E8%AF%AD%E5%8F%A5%E5%90%8E%E5%8F%AF%E4%BB%A5%E7%9C%81%E7%95%A5%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E5%88%86%E5%8F%B7(;)%E3%80%82%E5%A6%82%E6%9E%9C%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9C%89%E4%B8%A4%E6%9D%A1%E6%89%A7%E8%A1%8C%E8%AF%AD%E5%8F%A5%EF%BC%8C%E5%88%99%E9%9C%80%E8%A6%81%E7%94%A8%E8%8B%B1%E6%96%87%E5%8D%8A%E8%A7%92%E5%88%86%E5%8F%B7%E5%B0%86%E5%85%B6%E5%88%86%E9%9A%94%E5%BC%80%E3%80%82" title="Kotlin的基本语法">Kotlin 的基本语法</a>，需要记住的是，常量与变量都可以没有初始化值,但是在引用前必须初始化。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> crazyThu <span class="token operator">=</span> <span class="token number">50</span>
@@ -258,7 +258,7 @@ Done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 crazyThu <span class="token operator">=</span> <span class="token number">50</span>
 <span class="token comment">//可变变量</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>这时候有学习过其他语言的聪明同学可能就会问：“这不是只有<code>var</code>和<code>val</code>两种变量类型吗，如果不声明变量所存储的数据类型，编译器怎么判断变量储存的数据类型是什么呢？”。</p>
+<p>这时候有学习过其他语言的聪明同学可能就会问：“这不是只有 <code>var</code>和 <code>val</code>两种变量类型吗，如果不声明变量所存储的数据类型，编译器怎么判断变量储存的数据类型是什么呢？”。</p>
 <p>这就不得不提到 Kotlin 的特色，类型推导机制。下面举个例子来说明一下。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -266,7 +266,7 @@ crazyThu <span class="token operator">=</span> <span class="token number">50</sp
   <span class="token function">println</span><span class="token punctuation">(</span>crazyThu<span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>可以看到，很神奇啊，我们使用了<code>val</code>关键字定义了变量<code>crazyThu</code>，然后给它赋值 50，这时候你肯定知道，50 是一个<code>Int</code>类型也就是整型的数值，这个推导机制也一样，他这时候根据你给变量赋值的类型，来推断出这个<code>crazyThu</code>变量是一个整型变量。假如你这样写<code>val crazyThu = &quot;vivo50&quot;</code>，给<code>crazyThu</code>赋上一个字符串值，推导机制就会认为<code>crazyThu</code>是一个字符串类型的变量，而当你明确告诉它<code>val crazyThu : Int = 50</code>时，推导机制也就不会去进行推断了。但是需要注意的是，这样定义的变量不可以进行延时赋值操作的。</p>
+<p>可以看到，很神奇啊，我们使用了 <code>val</code>关键字定义了变量 <code>crazyThu</code>，然后给它赋值 50，这时候你肯定知道，50 是一个 <code>Int</code>类型也就是整型的数值，这个推导机制也一样，他这时候根据你给变量赋值的类型，来推断出这个 <code>crazyThu</code>变量是一个整型变量。假如你这样写 <code>val crazyThu = &quot;vivo50&quot;</code>，给 <code>crazyThu</code>赋上一个字符串值，推导机制就会认为 <code>crazyThu</code>是一个字符串类型的变量，而当你明确告诉它 <code>val crazyThu : Int = 50</code>时，推导机制也就不会去进行推断了。但是需要注意的是，这样定义的变量不可以进行延时赋值操作的。</p>
 <p>下面列举了一些在声明变量和给变量赋值时可能会出现的问题：</p>
 <p>1.当不赋初始值时，不对变量进行具体类型的约束</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -354,7 +354,7 @@ crazyThu <span class="token operator">=</span> <span class="token number">50</sp
 
 <span class="token keyword">val</span> s1 <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">" "</span></span><span class="token punctuation">)</span><span class="token comment">//不可使用s = s.split(" ")</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>字符串的元素可以使用索引运算符访问: <code>s[i]</code>；可以用 <code>for</code> 循环迭代字符串，也可以用<code>+</code>来连接字符串。</p>
+<p>字符串的元素可以使用索引运算符访问: <code>s[i]</code>；可以用 <code>for</code> 循环迭代字符串，也可以用 <code>+</code>来连接字符串。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
   <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">//结果为'r'</span>
@@ -365,7 +365,7 @@ crazyThu <span class="token operator">=</span> <span class="token number">50</sp
   <span class="token keyword">val</span> sNext <span class="token operator">=</span> s <span class="token operator">+</span> <span class="token string-literal singleline"><span class="token string">" plz"</span></span><span class="token comment">//sNext = "Crazy THU vivo 50 plz"</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>Kotlin 支持在字符串字面值中引用局部变量，只需要在变量名前加上字符<code>$</code>即可，此外还可以包含用花括号<code>&#123;&#125;</code>括起来的表达式，此时会自动求值并把结果合并到字符串中。</p>
+<p>Kotlin 支持在字符串字面值中引用局部变量，只需要在变量名前加上字符 <code>$</code>即可，此外还可以包含用花括号 <code>&#123;&#125;</code>括起来的表达式，此时会自动求值并把结果合并到字符串中。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> money <span class="token operator">=</span> <span class="token number">50</span>
 <span class="token comment">//直接包含变量</span>
 <span class="token function">println</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Crazy THU vivo </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">money</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token comment">//输出结果为"Crazy THU vivo 50"</span>
@@ -451,39 +451,46 @@ Crazy THU vivo <span class="token number">50</span><span class="token operator">
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">运行结果
 <span class="token punctuation">[</span>Crazy<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> vivo<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token punctuation">,</span> Crazy<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> vivo<span class="token punctuation">,</span> <span class="token number">50</span><span class="token operator">!</span><span class="token punctuation">]</span>
 <span class="token punctuation">[</span>Crazy<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> vivo<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token punctuation">,</span> <span class="token punctuation">,</span> Crazy<span class="token punctuation">,</span> THU<span class="token punctuation">,</span> vivo<span class="token punctuation">,</span> <span class="token number">50</span><span class="token operator">!</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>字符串的<strong>字面值</strong></p>
 <p><strong>转义字符串</strong></p>
-<p><strong>转义字符串</strong>是使用传统的<code>\</code>反斜杠方式将字符进行转义。</p>
+<p><strong>转义字符串</strong>是使用传统的 <code>\</code>反斜杠方式将字符进行转义。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
   <span class="token keyword">var</span> s <span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string-literal singleline"><span class="token string">"Crazy THU vivo 50\nCrazy THU vivo 50!"</span></span>
   <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">运行结果
 Crazy THU vivo <span class="token number">50</span>
 Crazy THU vivo <span class="token number">50</span><span class="token operator">!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>原生字符串</strong>是使用三对引号把所有字符括起来，原生字符串内就算有转义字符也不会被转义。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
   <span class="token keyword">var</span> s <span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string-literal multiline"><span class="token string">"""Crazy THU vivo 50\nCrazy THU vivo 50!"""</span></span>
   <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">运行结果
 Crazy THU vivo <span class="token number">50</span>\nCrazy THU vivo <span class="token number">50</span><span class="token operator">!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>字符串的<strong>模板表达式</strong></p>
-<p>所谓的模板表达式就算在字符串中添加占位符，字符串模板表达式由<code>$&#123;变量名/函数/表达式组成&#125;</code>，也可以省略<code>&#123;&#125;</code>，例如<code>$变量名</code>。例如前文提到的例子：</p>
+<p>所谓的模板表达式就算在字符串中添加占位符，字符串模板表达式由 <code>$&#123;变量名/函数/表达式组成&#125;</code>，也可以省略 <code>&#123;&#125;</code>，例如 <code>$变量名</code>。例如前文提到的例子：</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> money <span class="token operator">=</span> <span class="token number">50</span>
 <span class="token comment">//直接包含变量</span>
 <span class="token function">println</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"Crazy THU vivo </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$</span><span class="token expression">money</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token comment">//输出结果为"Crazy THU vivo 50"</span>
 
 <span class="token comment">//包含表达式</span>
 <span class="token function">println</span><span class="token punctuation">(</span><span class="token string-literal singleline"><span class="token string">"(money + 100) is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token expression">money <span class="token operator">+</span> <span class="token number">100</span></span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token comment">//输出结果为"(money + 100) is 150"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>那可能就有大聪明要问了:“那我就想要在原生字符串中输出这个美元符号咋办？”<br><del>我知道你很急，但你先别急，</del>在<strong>原生字符串中</strong>虽然不支持反斜杠转义，但我们可以用这样的方法来解决:</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
   <span class="token keyword">var</span> s <span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string-literal multiline"><span class="token string">"""Crazy THU vivo </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token expression"><span class="token char">'$'</span></span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">50"""</span></span>
   <span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin">运行结果
 Crazy THU vivo $<span class="token number">50</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -513,6 +520,7 @@ Crazy THU vivo $<span class="token number">50</span><span aria-hidden="true" cla
 
 <p>当然，<strong>非字符串数组</strong>也可以采用这种方法来进行初始化，具体的选择就看个人喜好了。</p>
 <pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> int_array <span class="token operator">:</span> IntArray <span class="token operator">=</span> <span class="token function">intArrayOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
 ]]></content>
       <categories>
